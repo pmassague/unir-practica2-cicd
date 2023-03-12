@@ -51,8 +51,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          AWS_ACCESS_KEY_ID: ASIAQUZ4GWGOJWQDPHUK
-          AWS_SECRET_ACCESS_KEY: LgWjj3w+B35LpZ836IfLG3YOL8hymSiLvhanLNX+
+          AWS_ACCESS_KEY_ID: ASIAQUZ4GWGOMDEFCXWH
+          AWS_SECRET_ACCESS_KEY: rJDijXSBrfsyBHuajjuORkUVr0/t6pOvqq8Fvu6h
           AWS_DEFAULT_REGION: us-east-1
       - name: Init EB CLI
         run: |
