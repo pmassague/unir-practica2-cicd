@@ -41,7 +41,7 @@ jobs:
            aws-region: us-east-1
        - name: Init EB CLI
          run: |
-           eb init -p python-3.8 Flask_Basic --region us-east-1
-       - name: Create Test Environment and Deploy to Elastic Beanstalk
+           eb init -p python-3.8 f_basic --region us-east-1
+       - name: Deploy to Elastic Beanstalk
          run: |
            (eb use test-environment && eb status test-environment && eb deploy) || eb create test-environment
