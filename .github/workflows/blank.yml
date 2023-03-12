@@ -27,22 +27,22 @@ jobs:
      steps:
        - uses: actions/checkout@v2
        - name: Install Python 3.9
-         uses: actions/setup-python@v1
-          with:
-           python-version: "3.9"
-      - name: Get EB CLI version
-        run: |
-          python -m pip install --upgrade pip
-          pip install awsebcli --upgrade
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          AWS_ACCESS_KEY_ID: ASIAQUZ4GWGOMDEFCXWH
-          AWS_SECRET_ACCESS_KEY: rJDijXSBrfsyBHuajjuORkUVr0/t6pOvqq8Fvu6h
-          AWS_DEFAULT_REGION: us-east-1
-      - name: Init EB CLI
-        run: |
+       - uses: actions/setup-python@v1
+         with:
+              python-version: "3.9"
+       - name: Get EB CLI version
+         run: |
+           python -m pip install --upgrade pip
+           pip install awsebcli --upgrade
+       - name: Configure AWS Credentials
+         uses: aws-actions/configure-aws-credentials@v1
+         with:
+           AWS_ACCESS_KEY_ID: ASIAQUZ4GWGOMDEFCXWH
+           AWS_SECRET_ACCESS_KEY: rJDijXSBrfsyBHuajjuORkUVr0/t6pOvqq8Fvu6h
+           AWS_DEFAULT_REGION: us-east-1
+       - name: Init EB CLI
+         run: |
            eb init -p python-3.8 Flask_Basic --region us-east-1
-      - name: Create Test Environment and Deploy to Elastic Beanstalk
-        run: |
-          (eb use test-environment && eb status test-environment && eb deploy) || eb create test-environment
+       - name: Create Test Environment and Deploy to Elastic Beanstalk
+         run: |
+           (eb use test-environment && eb status test-environment && eb deploy) || eb create test-environment
