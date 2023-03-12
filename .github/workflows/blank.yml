@@ -35,7 +35,7 @@ jobs:
            python -m pip install --upgrade pip
            pip install awsebcli --upgrade
        - name: Configure AWS Credentials
-         uses: aws-actions/configure-aws-credentials@v1
+       - uses: aws-actions/configure-aws-credentials@v1
          with:
            AWS_ACCESS_KEY_ID: ASIAQUZ4GWGOMDEFCXWH
            AWS_SECRET_ACCESS_KEY: rJDijXSBrfsyBHuajjuORkUVr0/t6pOvqq8Fvu6h
