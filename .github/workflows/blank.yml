@@ -38,6 +38,7 @@ jobs:
            aws-access-key-id: ASIAQUZ4GWGOMDEFCXWH
            aws-secret-access-key: rJDijXSBrfsyBHuajjuORkUVr0/t6pOvqq8Fvu6h
            aws-default-region: us-east-1
+           aws-region: us-east-1
        - name: Init EB CLI
          run: |
            eb init -p python-3.8 Flask_Basic --region us-east-1
